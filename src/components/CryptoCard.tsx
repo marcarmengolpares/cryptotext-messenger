@@ -35,8 +35,8 @@ export const CryptoCard = ({
       await navigator.clipboard.writeText(outputValue);
       setCopied(true);
       toast({
-        title: "¡Copiado!",
-        description: "El texto ha sido copiado al portapapeles",
+        title: "Copiat!",
+        description: "El text s'ha copiat al porta-retalls",
       });
       setTimeout(() => setCopied(false), 2000);
     }
@@ -52,7 +52,7 @@ export const CryptoCard = ({
       <div className="space-y-4">
         <div>
           <label className="text-sm text-muted-foreground mb-2 block">
-            Mensaje de entrada
+            Missatge d'entrada
           </label>
           <Textarea
             placeholder={inputPlaceholder}
@@ -71,7 +71,7 @@ export const CryptoCard = ({
 
         <div>
           <div className="flex items-center justify-between mb-2">
-            <label className="text-sm text-muted-foreground">Resultado</label>
+            <label className="text-sm text-muted-foreground">Resultat</label>
             {outputValue && (
               <Button
                 variant="ghost"

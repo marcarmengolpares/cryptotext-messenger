@@ -37,7 +37,7 @@ const Index = () => {
             </h1>
           </div>
           <p className="text-muted-foreground mt-2 text-sm">
-            Encripta y desencripta mensajes de forma segura
+            Encripta i desencripta missatges de forma segura
           </p>
         </div>
       </header>
@@ -48,9 +48,9 @@ const Index = () => {
           {/* Encrypt Section */}
           <CryptoCard
             title="Encriptar"
-            inputPlaceholder="Escribe tu mensaje aquí..."
-            outputPlaceholder="Tu mensaje encriptado aparecerá aquí"
-            buttonText="Encriptar Mensaje"
+            inputPlaceholder="Escriu el teu missatge aquí..."
+            outputPlaceholder="El teu missatge encriptat apareixerà aquí"
+            buttonText="Encriptar Missatge"
             inputValue={encryptInput}
             outputValue={encryptOutput}
             onInputChange={setEncryptInput}
@@ -61,9 +61,9 @@ const Index = () => {
           {/* Decrypt Section */}
           <CryptoCard
             title="Desencriptar"
-            inputPlaceholder="Pega tu mensaje encriptado aquí..."
-            outputPlaceholder="Tu mensaje desencriptado aparecerá aquí"
-            buttonText="Desencriptar Mensaje"
+            inputPlaceholder="Enganxa el teu missatge encriptat aquí..."
+            outputPlaceholder="El teu missatge desencriptat apareixerà aquí"
+            buttonText="Desencriptar Missatge"
             inputValue={decryptInput}
             outputValue={decryptOutput}
             onInputChange={setDecryptInput}
@@ -73,15 +73,21 @@ const Index = () => {
         </div>
 
         {/* Footer Info */}
-        <div className="mt-16 text-center max-w-2xl mx-auto">
+        <div className="mt-16 space-y-6 text-center max-w-2xl mx-auto">
           <div className="p-6 rounded-lg bg-gradient-cyber border border-border/50">
             <h3 className="text-lg font-semibold text-foreground mb-2">
-              ¿Cómo funciona?
+              Com funciona?
             </h3>
             <p className="text-muted-foreground text-sm">
-              CryptoText utiliza un algoritmo de cifrado por sustitución con desplazamiento aleatorio.
-              Cada mensaje se encripta con un código único, asegurando que el mismo texto produzca
-              diferentes resultados cada vez.
+              CryptoText utilitza un algoritme de xifratge per substitució amb desplaçament aleatori.
+              Cada missatge s'encripta amb un codi únic, assegurant que el mateix text produeixi
+              resultats diferents cada vegada.
+            </p>
+          </div>
+          
+          <div className="p-4 rounded-lg bg-amber-500/10 border border-amber-500/30">
+            <p className="text-amber-600 dark:text-amber-400 text-sm font-medium">
+              ⚠️ Important: No es poden utilitzar els caràcters especials "Ñ" ni alguns símbols en el text original.
             </p>
           </div>
         </div>
