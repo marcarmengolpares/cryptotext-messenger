@@ -30,8 +30,8 @@ const MatrixColumn = ({ index, speed }: { index: number; speed: number }) => {
       className="absolute top-0 flex flex-col font-mono text-xs leading-tight"
       style={{
         left: `${index * 20}px`,
-        animation: `matrix-fall ${12 + Math.random() * 6}s linear infinite`,
-        animationDelay: `${Math.random() * 3}s`
+        animation: `matrix-fall ${25 + Math.random() * 15}s linear infinite`,
+        animationDelay: `${Math.random() * 8}s`
       }}
     >
       {chars.map((char, i) => (
@@ -61,7 +61,7 @@ const TypingText = ({ text, delay, onComplete }: { text: string; delay: number; 
         const timer = setTimeout(() => {
           setDisplayedText(prev => prev + text[currentIndex]);
           setCurrentIndex(prev => prev + 1);
-        }, 30);
+        }, 20);
         return () => clearTimeout(timer);
       } else if (onComplete && currentIndex === text.length) {
         const completeTimer = setTimeout(onComplete, 800);
@@ -114,7 +114,7 @@ export const IntroAnimation = ({ onComplete }: IntroAnimationProps) => {
           <MatrixColumn 
             key={i} 
             index={i} 
-            speed={30 + Math.random() * 50}
+            speed={80 + Math.random() * 120}
           />
         ))}
       </div>
