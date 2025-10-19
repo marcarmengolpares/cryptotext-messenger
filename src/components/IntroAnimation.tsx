@@ -64,7 +64,7 @@ const TypingText = ({ text, delay, onComplete }: { text: string; delay: number; 
         }, 20);
         return () => clearTimeout(timer);
       } else if (onComplete && currentIndex === text.length) {
-        const completeTimer = setTimeout(onComplete, 600);
+        const completeTimer = setTimeout(onComplete, 800);
         return () => clearTimeout(completeTimer);
       }
     }, delay);
