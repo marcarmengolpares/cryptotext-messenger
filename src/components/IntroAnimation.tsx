@@ -64,7 +64,7 @@ const TypingText = ({ text, delay, onComplete }: { text: string; delay: number; 
         }, 20);
         return () => clearTimeout(timer);
       } else if (onComplete && currentIndex === text.length) {
-        const completeTimer = setTimeout(onComplete, 800);
+        const completeTimer = setTimeout(onComplete, 300);
         return () => clearTimeout(completeTimer);
       }
     }, delay);
@@ -152,7 +152,7 @@ export const IntroAnimation = ({ onComplete }: IntroAnimationProps) => {
                 {index === messageIndex ? (
                   <TypingText 
                     text={message} 
-                    delay={index * 100}
+                    delay={0}
                     onComplete={handleMessageComplete}
                   />
                 ) : (
