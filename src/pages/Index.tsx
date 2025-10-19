@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { CryptoCard } from "@/components/CryptoCard";
+import { IntroAnimation } from "@/components/IntroAnimation";
 import { Lock, Unlock } from "lucide-react";
 import { encriptar, desencriptar } from "@/utils/cryptoText";
 
 const Index = () => {
+  const [showIntro, setShowIntro] = useState(true);
   const [encryptInput, setEncryptInput] = useState("");
   const [encryptOutput, setEncryptOutput] = useState("");
   const [decryptInput, setDecryptInput] = useState("");
@@ -23,8 +25,12 @@ const Index = () => {
     }
   };
 
+  if (showIntro) {
+    return <IntroAnimation onComplete={() => setShowIntro(false)} />;
+  }
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background animate-fade-in">
       {/* Header */}
       <header className="border-b border-border backdrop-blur-sm sticky top-0 z-10 bg-background/80">
         <div className="container mx-auto px-4 py-6">
